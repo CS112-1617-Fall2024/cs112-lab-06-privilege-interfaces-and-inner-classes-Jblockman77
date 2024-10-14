@@ -81,12 +81,12 @@ public class Main
 						for (int j = 0; j < howManyPlaces; j++) {
 							System.out.print(" ");
 						}
-						System.out.print(people[i].getName().charAt(0));
+						System.out.print(people[i].getName().toUpperCase().charAt(0));
 						System.out.println();
 					}
 					for (int i = 0; i < people.length - 1; i++) {
 						if (people[i] != null) {
-							if (people[i].compareTo(self) == 0) {
+							if (people[i].compareTo(self) > 0) {
 								System.out.println("More privilege than " + people[i].getName());
 							} else {
 								System.out.println("Less privilege than " + people[i].getName());
@@ -111,7 +111,6 @@ public class Main
 			"in our own growth and self-reflection. We appreciate you taking that journey with us! :D");
 	}
 
-	/***** TODO: (Part 2) upgrade method to ask user for pronouns and background info *****/
 	public static void fillInfo(Person person){
 		//sets default privilege prior to questionnaire to 100
 		String name;
